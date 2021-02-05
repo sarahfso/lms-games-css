@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 16px;
+  color: black;
+}
+
+.nav-superior {
+  background-color: rgb(112, 112, 223);
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 0 40px;
+}
+
+.nav-superior a:hover {
+  background: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-esquerdo {
+  display: flex;
+  flex-direction: column;
+  
+  width: 350px;
+  height: 800px;
+  background-color: aquamarine;
+}
+
+.nav-esquerdo a:hover {
+  background: #fafaf1;
+  opacity: 0.8;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.one, .two, .three, .four, .five {
+  flex-grow: 1;
+
+  height: 400px;
+}
+
+.one {
+  background-color: rgb(208, 208, 208);
+
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  height: 40px;
+
+  width: 100%;
+  border: none;
+}
+
+.one:hover .accordion-item:hover .accordion-item-content {
+  height: 240px;
+}
+
+.accordion-item-content,
+.one:hover .accordion-item-content {
+  height: 0;
+  overflow: hidden;
+  transition: height .25s;
+}
+
+.two {
+  background-color: #fff;
+  position: relative;
+}
+
+.image {
+  display: block;
+  height: 100%;
+}
+
+.text {
+  position: absolute; 
+  bottom: 0; 
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff; 
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+.three {
+  background-color: orange;
+}
+
+.four {
+  background-color: greenyellow;
+}
+
+.five {
+  background-color: green;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .nav-esquerdo{
+    width: 100%;
+    height: 400px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
